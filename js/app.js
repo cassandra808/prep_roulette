@@ -10,7 +10,27 @@ For the number 0, give it a background color of green and a font color of white.
 A random number will be generated every 5 seconds.*/
 
 // Bonus
-// 1) Add some additional styling to your application.
+// 1) A//dd some additional styling to your application.
 // 2) Create on and off buttons that will start and stop your application.
 
+//var xyz = Math.floor (Math.random() * 37);
+//var change = document.getElementById("card")
+//change.innerHTML = xyz
 
+//change.addEventListener (" ", roulette)
+
+function updateRandom() {
+    var random = Math.floor (Math.random() * 36);
+  var divElem = document.createElement ("div");
+  divElem.innerHTML = random;
+  main.appendChild(divElem)
+  if (random%2 === 0 && random !==0){
+  divElem.className = "even";
+  }else if (random%2 === 1){
+    divElem.className = "odd";
+  }else if (random === 0){
+    divElem.className = "zero";
+  }  
+}
+
+setInterval(updateRandom,2000);	
